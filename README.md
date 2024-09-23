@@ -1,16 +1,6 @@
-# myapp
+# my-album
 
-A new Flutter project.
+* TV 사이즈를 기본으로 google photo, ftp, 외장에 있는 비디오/사진을 플레이
+* 설정, 자동실행
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2024-09-24 : 프로젝트 생성함

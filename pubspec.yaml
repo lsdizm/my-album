@@ -30,6 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  video_player: ^2.5.1
+  photo_manager: ^2.6.0
+  ftpconnect: ^1.0.1
+  file_picker: ^4.6.1
 
 
   # The following adds the Cupertino Icons font to your application.
