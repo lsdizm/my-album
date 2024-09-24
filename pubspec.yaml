@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_sign_in: ^5.0.7
   video_player: ^2.5.1
   photo_manager: ^2.6.0
   ftpconnect: ^1.0.1
