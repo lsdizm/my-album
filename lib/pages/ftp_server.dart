@@ -19,10 +19,11 @@ class _FtpServerState extends State<FtpServer> {
     {"name": "video 1", "path": "../asset/video_test.mp4", "type": "video"},    
   ];
   
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('File List'),
+        title: const Text('File List'),
         backgroundColor: Colors.blueGrey[900],
       ),
       body: ListView.builder(
@@ -31,7 +32,7 @@ class _FtpServerState extends State<FtpServer> {
           return ListTile(
             title: Text(
               files[index]["name"]!,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
             onTap: () {
               if (files[index]["type"] == "image") {
@@ -63,13 +64,13 @@ class _FtpServerState extends State<FtpServer> {
 class ImageViewerScreen extends StatelessWidget {
   final String imagePath;
 
-  ImageViewerScreen({required this.imagePath});
+  const ImageViewerScreen({super.key, required this.imagePath});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Image Viewer'),
+        title: const Text('Image Viewer'),
         backgroundColor: Colors.blueGrey[900],
       ),
       body: Center(
@@ -82,7 +83,7 @@ class ImageViewerScreen extends StatelessWidget {
 class VideoViewerScreen extends StatefulWidget {
   final String videoPath;
 
-  VideoViewerScreen({required this.videoPath});
+  const VideoViewerScreen({super.key, required this.videoPath});
 
   @override
   _VideoViewerScreenState createState() => _VideoViewerScreenState();
@@ -111,7 +112,7 @@ class _VideoViewerScreenState extends State<VideoViewerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Video Viewer'),
+        title: const Text('Video Viewer'),
         backgroundColor: Colors.blueGrey[900],
       ),
       body: Center(
@@ -120,7 +121,7 @@ class _VideoViewerScreenState extends State<VideoViewerScreen> {
                 aspectRatio: _controller.value.aspectRatio,
                 child: VideoPlayer(_controller),
               )
-            : CircularProgressIndicator(), // 동영상 로딩 중 표시
+            : const CircularProgressIndicator(), // 동영상 로딩 중 표시
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

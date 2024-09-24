@@ -82,11 +82,11 @@ class _GooglePhotoState extends State<GooglePhoto> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Google Photos API Demo'),
+        title: const Text('Google Photos API Demo'),
         actions: [
           if (_currentUser != null)
             IconButton(
-              icon: Icon(Icons.logout),
+              icon: const Icon(Icons.logout),
               onPressed: _handleSignOut,
             )
         ],
@@ -96,7 +96,7 @@ class _GooglePhotoState extends State<GooglePhoto> {
             ? _buildPhotosList()
             : ElevatedButton(
                 onPressed: _handleSignIn,
-                child: Text('Sign in with Google'),
+                child: const Text('Sign in with Google'),
               ),
       ),
     );

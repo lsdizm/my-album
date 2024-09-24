@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../widgets/menu.dart';
-import '../models/album_item.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
