@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import '../commons/connector.dart';
-import '../models/menu_item.dart';
 import '../pages/google_photo.dart';
-import '../pages/home.dart';
 import '../pages/ftp_server.dart';
-import '../pages/usb_folder.dart';
 import '../pages/setting.dart';
 
 class Menu extends StatelessWidget {
@@ -23,7 +18,7 @@ class Menu extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.blueGrey[900], // Drawer 헤더 배경색
             ),
-            child: Text('My Album Menu', style: TextStyle(color: Colors.white)),
+            child: const Text('My Album Menu', style: TextStyle(color: Colors.white)),
           ),
           ListTile(
             leading: const Icon(Icons.photo_camera_back),
