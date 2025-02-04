@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'ftp_settings_page.dart';
+import 'ftp_file_list.dart';
 
 class FtpServer extends StatefulWidget {
   const FtpServer({super.key});
@@ -17,6 +19,8 @@ class _FtpServerState extends State<FtpServer> {
   final List<Map<String, String>> files = [
     {"name": "Image 1", "path": "../asset/image_test.jpg", "type": "image"},
     {"name": "video 1", "path": "../asset/video_test.mp4", "type": "video"},    
+    {"name": "setting", "path": "../asset/video_test.mp4", "type": "setting"},
+    {"name": "list", "path": "../asset/video_test.mp4", "type": "list"},
   ];
   
   @override
@@ -43,6 +47,7 @@ class _FtpServerState extends State<FtpServer> {
                         ImageViewerScreen(imagePath: files[index]["path"]!),
                   ),
                 );
+                
               } else if (files[index]["type"] == "video") {
                 Navigator.push(
                   context,
@@ -51,6 +56,23 @@ class _FtpServerState extends State<FtpServer> {
                         VideoViewerScreen(videoPath: files[index]["path"]!),
                   ),
                 );
+
+              } else if (files[index]["type"] == "setting") {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FtpSettingsPage()
+                  ),
+                );
+
+              } else if (files[index]["type"] == "list") {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FtpFileListPage()
+                  ),
+                );
+
               }
             },
           );
