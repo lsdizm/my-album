@@ -1,0 +1,8 @@
+scp -i ./object/myrace-ssh-key-2024-10-29.key -r build/web/* ubuntu@132.226.168.74:/home/ubuntu/web 
+
+ssh -i ./object/myrace-ssh-key-2024-10-29.key ubuntu@132.226.168.74
+
+sudo systemctl stop nginx
+sudo systemctl start nginx
+
+
